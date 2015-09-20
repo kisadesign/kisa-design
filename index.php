@@ -227,7 +227,7 @@
                     <div class="col-block--left">
                         <h2>Get in contact...</h2>
                         <p>Do you have an idea for a new website or are you ready to start creating your dream? Then we are here to help. We can offer a quality bespoke service where we will value your dreams as much as you do. </p>
-                        <p>Simple fill in the form with what you require and we will get back to you.</p>
+                        <p>Simply fill in the form with what you require and we will get back to you.</p>
                         <p class="number"><i class="fa fa-phone"></i> 07725 812767</p>
                         <?php
                             $sentMail = $_GET["sent"];
