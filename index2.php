@@ -90,9 +90,43 @@
                 </div>
           </section>
 
-          
-
           <section id="section2">
+
+            <div class="outer-warpper">
+
+                <div class="wrapper-one">
+
+                    <div class="col-container col3">
+                        <div class="col-block">
+                            <figure>
+                                <a href="##"><img src="img/portfolio1.jpg" alt="##" title="##"></a>
+                            </figure>
+                        </div>
+
+                        <div class="col-block">
+                            <figure>
+                                <a href="##"><img src="img/portfolio1.jpg" alt="##" title="##"></a>
+                            </figure>
+                        </div>
+
+                        <div class="col-block">
+                            <figure>
+                                <a href="##"><img src="img/portfolio1.jpg" alt="##" title="##"></a>
+                            </figure>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="wrapper2">
+
+                </div>
+            </div>
+
+
+          </section>
+
+          <!-- <section id="section2">
             <h2>Lets take a look...</h2>
             <div class="text-central">
                 <div class="col-container col3">
@@ -186,7 +220,7 @@
                     </div>
                     </div>
                 </div>
-          </section>
+          </section> -->
 
           <section id="section3">
                 <h2>Its about experince as much as design.</h2>
