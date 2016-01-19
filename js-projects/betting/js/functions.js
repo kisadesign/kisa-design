@@ -1,29 +1,96 @@
 /**
  * Created by markbensley on 11/11/15.
  */
-var horses = [
-        {name: 'horse1', odds: 1.50, number: 1, raceSpeed: 0, RandomRace: 0, racePercentage: 0, finalScore: 0},
-        {name: 'horse2', odds: 1.75, number: 2, raceSpeed: 0, RandomRace: 0, racePercentage: 0, finalScore: 0},
-        {name: 'horse3', odds: 1.25, number: 3, raceSpeed: 0, RandomRace: 0, racePercentage: 0, finalScore: 0},
-        {name: 'horse4', odds: 3.00, number: 4, raceSpeed: 0, RandomRace: 0, racePercentage: 0, finalScore: 0},
-        {name: 'horse5', odds: 2.00, number: 5, raceSpeed: 0, RandomRace: 0, racePercentage: 0, finalScore: 0}
-    ],
-    userName = prompt('Please enter your name:'),
+var windowHeight = window.innerHeight,
+    pageHeader = document.getElementById('header').clientHeight,
+    contentHeight = windowHeight - pageHeader;
+    document.getElementById('content-container').style.cssText = "height:" + contentHeight + "px";
+
+
+var horseNames = ['Aurora', 'Flash Step', 'Nightmar', 'Thad', 'Are', 'Cruis', 'Aphrodit', 'Poke', 'Flight Blosso', 'Columbo'],
+    raceSpeed = 0,
+    randomRace = 0,
+    racePercentage = 0,
+    finalScore = 0;
+
+
+//Selects a random number of horses that will race
+var numberOfRunners = Math.floor((Math.random() * horseNames.length) + 1);
+
+//Shuffles the horseNames array
+function shuffle(nextRace) {
+    var currentIndex = nextRace.length, temporaryValue, randomIndex ;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = nextRace[currentIndex];
+        nextRace[currentIndex] = nextRace[randomIndex];
+        nextRace[randomIndex] = temporaryValue;
+
+
+    }
+
+    return nextRace;
+}
+
+//Sends the horse names array to be shuffled
+shuffle(horseNames);
+
+
+//Takes the number of horse that will race and takes that number of names from the horseNames array
+var newSet = horseNames.splice(0,numberOfRunners),
+    horses =[],
+    lineUp = 0;
+
+console.log(newSet.length);
+
+
+//Builds out the array for the race
+while(lineUp < numberOfRunners){
+    //var random = Math.floor(Math.random() * 10);
+    horses.push({'name': newSet[lineUp], 'odds': 1.50, 'number': lineUp++, 'raceSpeed': raceSpeed, 'randomRace': randomRace, 'racePercentage': racePercentage, 'finalScore': finalScore});
+    lineUp++;
+}
+//console.log(horseNames);
+
+var userName,
     playMoney = 100.00,
     betValue = 0;
 
-    if(/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test(userName)){
-        document.getElementById('player-name').innerHTML = userName;
-    }
-    else {
-        //Do something for no match
+    //Removes errors
+   function removeErrors(){
+       document.getElementById('nameError').style.cssText = 'display:none';
+       document.getElementById('user-name').style.cssText = 'background: #fff';
+   }
+
+
+    //Tests users name
+    function testUser(){
+        userName = document.getElementById('user-name').value;
+        if(/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test(userName)){
+            document.getElementById('player-name').innerHTML = "Welcome " +  userName;
+            document.getElementById('overlay').style.cssText = 'display:none';
+        }
+        else {
+            document.getElementById('nameError').style.cssText = 'display:block';
+            document.getElementById('user-name').style.cssText = 'background: #ffc3c3';
+        }
     }
 
+
+//Sets the players pot
 document.getElementById('player-pot').innerHTML = playMoney;
 
+//Builds the table to display runners
 var listHorses = document.getElementById('horses');
 for (var i = 0; i < horses.length; i++){
-    listHorses.innerHTML += "<label><input type='radio' value='" + horses[i].number + "' name='horseNumber' id='" + horses[i].name + "'>" + horses[i].name + " " + horses[i].odds + "</label><br>";
+    listHorses.innerHTML += "<input class='horse-list' id='horse" + i +"' type='radio' value='" + horses[i].number + "' name='horseNumber' id='" + horses[i].name + "'><label for='horse" + i + "'><span class='horse-name'>" + horses[i].name + "</span><span class='horse-odds'> " + horses[i].odds + "</span></label>";
 }
 
 //Gets the list of horses from the html
@@ -35,7 +102,7 @@ function placeBet(){
     //betValue is the amount bet
     betValue = document.getElementById('bet-placed').value;
 
-    if(!betValue || !/^[0-9]+$/.test(betValue)){
+    if(!betValue || !/^\s*-?\d+(\.\d{1,2})?\s*$/.test(betValue)){
         alert('Enter amount');
     }
     else{
@@ -158,7 +225,7 @@ function placeBet(){
                 if (extraRace.length >= 2){
                     //Select a random winner if theres more than one horse with the same low score
                     headWinner = extraRace[Math.floor(Math.random() * extraRace.length)]
-                    console.log('There are more than one winner: ' + extraRace.length);
+                    console.log('Theres more than one winner: ' + extraRace.length);
                     console.log('Won by a nose' + headWinner);
                     console.log('You chose horse number: ' + chossenHorseNumber);
                 }

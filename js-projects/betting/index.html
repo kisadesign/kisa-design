@@ -1,28 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<div lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,300,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
 </head>
-<body>
 
-    <section class="player-stats">
-        <div class="player">
+
+    <div id="main-container">
+
+        <header id="header">
+            <h1>Lets go racing!</h1>
             <p id="player-name"></p>
-            <p class="player-wallet">Wallet: </p>
-            <p id="player-pot"></p>
+        </header>
+
+        <div id="content-container">
+        <section class="slide--one">
+
+                <section id="name-container">
+                    <div class="name-box-outer">
+                        <div class="name-box-inner">
+                            <h1>Please enter your name:</h1>
+                            <p id="nameError">Your name can only contain characters A-Z</p>
+                            <input type="text" id="user-name" onclick="removeErrors()">
+                            <input type="submit" value="Lets race" onclick="testUser()" class="name-button">
+                        </div>
+                    </div>
+                </section>
+
+        </section>
+
+
+            <section class="slide--two">
+                <div class="col-container col73">
+                    <div class="col-block--left">
+                        <section class="player-stats">
+                            <div class="player-funds">
+                                <p class="player-wallet">Wallet: £<span id="player-pot"></span></p>
+
+                            </div>
+                        </section>
+
+                        <section id="horses">
+
+                        </section>
+
+                        <section class="place-bet">
+                            <div class="col-container col82">
+                                <div class="col-block--left">
+                                    <p>Stake to bet £</p>
+
+                                </div>
+                                <div class="col-block--right">
+                                    <input type="text" name="stake" value="" id="bet-placed">
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <input type="button" value="Bet now!" onclick="placeBet()" id="place-bet-button">
+                    </div>
+                    <div class="col-block--right">
+                        <p>Hello world</p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <section id="horses">
-
-    </section>
-
-    <section class="place-bet">
-        <label>Stake to bet:</label><input type="text" name="stake" value="" id="bet-placed"><input type="button" value="Bet now!" onclick="placeBet()">
-    </section>
+    </div>
 
     <script src="js/functions.js" type="text/javascript"></script>
 </body>
