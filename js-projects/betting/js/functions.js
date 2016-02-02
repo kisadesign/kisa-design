@@ -75,7 +75,7 @@ var userName,
         userName = document.getElementById('user-name').value;
         if(/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test(userName)){
             document.getElementById('player-name').innerHTML = "Welcome " +  userName;
-            document.getElementById('overlay').style.cssText = 'display:none';
+            //document.getElementById('overlay').style.cssText = 'display:none';
         }
         else {
             document.getElementById('nameError').style.cssText = 'display:block';
