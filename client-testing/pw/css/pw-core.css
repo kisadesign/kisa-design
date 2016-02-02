@@ -1,15 +1,36 @@
 body {padding:0; margin:0; height:100%;}
 
-/* Fonts */
-h1, h2, h3 {font-family: 'Roboto', sans-serif;}
+/* ---------------------------- */
+/* Global fonts                 */
+/* ---------------------------- */
+h1, h2, h3 {font-family: 'Roboto', sans-serif; color:#000;}
 h1 {font-size:36px;}
 h2 {font-size:26px;}
 h3 {font-size:20px;}
-p {font-family: 'Lato', sans-serif; font-size:14px;}
-ul {}
-ul li {font-family: 'Lato', sans-serif;}
+p {font-family: 'Lato', sans-serif; font-size:14px; color:#000;}
+ul {padding:0; margin:0;}
+ul li {font-family: 'Lato', sans-serif; color:#000;}
 
-/* Global styles */
-.colour--primary {background:#3f51b5;}
-.colour--secondary {background:#303f9f}
-.colour--acent {}
+/* ---------------------------- */
+/* Global colours               */
+/* ---------------------------- */
+
+.colour--bg-primary {background:#3f51b5;}
+.colour--bg-secondary {background:#303f9f;}
+.colour--bg-accent {background:#b39ddb;}
+
+.colour--font-primary {color:#fff;}
+.colour--font-secondary {color:#fff;}
+.colour--font-accent {color:#000;}
+
+.colour--link-primary {color:#fff; font-size:18px;}
+.colour--link-accent {color:#000;}
+
+/* ---------------------------- */
+/* Navigation                   */
+/* ---------------------------- */
+
+.navbar {border-radius:0; padding:20px 0 20px 0;}
+.container {width:1240px;}
+.container a {padding-bottom:20px;}
+.container a:hover {background: none !important; color:#fff;}
