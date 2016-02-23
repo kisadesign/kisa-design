@@ -1,13 +1,5 @@
 @charset "utf-8";
 
-/* -- Global -- */
-html {height:100%;}
-body {height:100%;}
-figure {width:100%;}
-figure img {max-width:100%;}
-p {font-family: 'centuryGothic', Arial, sans-serif;}
-h1, h2, h3, h4 {font-family: 'futuraBook', Arial, sans-serif;}
-
 @font-face {
     font-family: 'futuraLight';
     src: url('../fonts/FuturaLight.eot'); /* IE9 Compat Modes */
@@ -35,7 +27,22 @@ h1, h2, h3, h4 {font-family: 'futuraBook', Arial, sans-serif;}
     url('../fonts/CenturyGothic.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
-/* --- Navigation --- */
+
+/* -- Global -- */
+html {height:100%;}
+body {height:100%;}
+
+figure {width:100%; margin:0;}
+figure img {max-width:100%;}
+
+p {font-family: 'centuryGothic', Arial, sans-serif;}
+h1, h2, h3, h4 {font-family: 'futuraBook', Arial, sans-serif;}
+
+.wr-container--outer {width:100%;}
+.wr-container--inner {width:1240px;}
+.wr-max-height {height:100%;}
+
+    /* --- Navigation --- */
 
 #navbar {height:100%;}
 #navbar .nav-table {width:100%; table-layout: fixed; display: table; height:100%;}
