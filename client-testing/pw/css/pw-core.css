@@ -1,15 +1,39 @@
 body {padding:0; margin:0; height:100%;}
+html {height:100%;}
 
 /* ---------------------------- */
 /* Global fonts                 */
 /* ---------------------------- */
-h1, h2, h3 {font-family: 'Roboto', sans-serif; color:#000;}
-h1 {font-size:36px;}
+h1, h2, h3 {font-family: 'Lato', sans-serif; color:#000;}
+h1 {font-size:36px; font-weight:300;}
 h2 {font-size:26px;}
 h3 {font-size:20px;}
-p {font-family: 'Lato', sans-serif; font-size:14px; color:#000;}
+p {font-family: 'Roboto', sans-serif; font-size:14px; color:#000;}
 ul {padding:0; margin:0;}
-ul li {font-family: 'Lato', sans-serif; color:#000;}
+ul li {font-family: 'Roboto', sans-serif; color:#000;}
+
+/* ---------------------------- */
+/* Global layout                */
+/* ---------------------------- */
+figure {width:100%; margin:0;}
+figure img {max-width:100%;}
+.pw-wrapper {width:100%; height:100%;}
+.col-container {width:102%; margin-left:-2%; height: auto; overflow: hidden; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; flex-wrap:wrap;}
+.col-block {position: relative; margin-left:2%;}
+.col .col-block {width:100%; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col2 .col-block {width:48%; padding:0; float:left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col3 .col-block {width:31.33%; padding:0; float:left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col4 .col-block {width:23%; padding:0; float:left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col5 .col-block {width:18%; padding:0; float:left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col6 .col-block {width:14.666%; padding:0; float:left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col73 .col-block--left {width:68%; margin-left:2%; float:left; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col73 .col-block--right {width:28%; margin-left:2%; float:left; padding:0 -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col37 .col-block--left {width:28%; margin-left:2%; float:left; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col37 .col-block--right {width:68%; margin-left:2%; float:left; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col64 .col-block--left {width:58%; margin-left:2%; float:left; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col64 .col-block--right {width:38%; margin-left:2%; float:left; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col46 .col-block--left {width:38%; margin-left:2%; float:left; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.col46 .col-block--right {width:58%; margin-left:2%; float:left; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 /* ---------------------------- */
 /* Global colours               */
@@ -30,7 +54,8 @@ ul li {font-family: 'Lato', sans-serif; color:#000;}
 /* Navigation                   */
 /* ---------------------------- */
 
-.navbar {border-radius:0; padding:20px 0 20px 0;}
+.navbar {border-radius:0; padding:10px 0 10px 0; margin-bottom:0;}
 .container {width:1240px;}
 .container a {padding-bottom:20px;}
 .container a:hover {background: none !important; color:#fff;}
+
