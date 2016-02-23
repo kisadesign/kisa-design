@@ -35,18 +35,20 @@ body {height:100%;}
 figure {width:100%; margin:0;}
 figure img {max-width:100%;}
 
-p {font-family: 'centuryGothic', Arial, sans-serif;}
+p {font-family: 'centuryGothic', Arial, sans-serif; font-size:16px;}
 h1, h2, h3, h4 {font-family: 'futuraBook', Arial, sans-serif;}
+h2 {margin:0;}
 
 .wr-container--outer {width:100%;}
-.wr-container--inner {width:1240px;}
+.wr-container--inner {width:1240px; margin:0 auto; position:relative;}
 .wr-max-height {height:100%;}
 
-    /* --- Navigation --- */
+/* --- Navigation --- */
 
 #navbar {height:100%;}
 #navbar .nav-table {width:100%; table-layout: fixed; display: table; height:100%;}
 #navbar .nav-table .nav-cell {display:table-cell; vertical-align: middle; text-align: center;}
+.navbar h1 {margin:0; padding:0;}
 
 /* --- Col styles --- */
 .col-container {width:102%; margin-left:-2%; height: auto; overflow: hidden; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; flex-wrap:wrap;}
