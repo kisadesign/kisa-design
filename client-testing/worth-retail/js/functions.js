@@ -15,17 +15,24 @@ $(document).ready(function(){
 
 
     var windowSize = $(window).height(),
-        windowSubSize = windowSize - 147;
-    console.log(windowSize + " " + windowSubSize);
-
-    var c = windowSubSize / windowSize,
-        d = c * 100;
-
+        navHeight = $('nav').height(),
+        windowSubSize = windowSize - navHeight;
     $('.wr-max-height').css("height", windowSubSize);
+
     $(window).resize(function(){
         var windowSize = $(window).height(),
-            windowSubSize = windowSize - 147;
+            windowSubSize = windowSize - navHeight;
         $('.wr-max-height').css("height", windowSubSize);
+    });
+
+
+    $('.js-scroll-link').click(function(e){
+        e.preventDefault();
+        var scrollLocation = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(scrollLocation).offset().top
+        }, 1000);
+
     })
 
 

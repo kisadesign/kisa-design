@@ -2,17 +2,24 @@
 
 .wr-slider {height:100%; margin-bottom:0 !important;}
 .wr-slide--one {text-align: center;}
-.wr-slide--one h2 {font-size:96px; color:#47969c; text-transform: uppercase; margin:20px 0 0 0;}
+.wr-slide--one h2 {color:#47969c; text-transform: uppercase; margin:20px 0 0 0;}
 .wr-slide--one p {margin:50px 0;}
 .wr-slide--one figure img {text-align: center; display:initial; margin-top:20px;}
 .wr-slide--one .wr-slide--content {position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%); width:100%; }
 .wr-slider .wr-slide-arrow-next i {font-size:70px; padding:2px 16px 2px 19px; color:#fff;}
 .wr-slider .wr-slide-arrow-prev i {font-size:70px; padding:2px 19px 2px 16px; color:#fff;}
-.wr-slide-arrow-next {position: absolute; top: 44%; right:30px;  background: rgba(24, 187, 187, 0.5); z-index:2; cursor: pointer;}
-.wr-slide-arrow-prev {position: absolute; top: 44%; left:30px; background: rgba(24, 187, 187, 0.5); z-index:2; cursor: pointer;}
+.wr-slide-arrow-down i {font-size:70px; padding:0 16px 0 16px; color:#000;}
+.wr-slide-arrow-up i {font-size:70px; padding:0 16px 0 16px; color:#fff;}
+.wr-slide-arrow-next {position: absolute; top: 50%; right:0; transform: translate(-30%, -50%); background: rgba(24, 187, 187, 0.5); z-index:2; cursor: pointer;}
+.wr-slide-arrow-prev {position: absolute; top: 50%; left:0; transform: translate(30%, -50%);  background: rgba(24, 187, 187, 0.5); z-index:2; cursor: pointer;}
+.wr-slide-arrow-down {position: absolute; left: 50%; transform: translate(-50%, 0); bottom:0; z-index:2; cursor: pointer;}
+.wr-slide-arrow-up {position: absolute; left: 50%; transform: translate(-50%, 0); top:0; z-index:2; cursor: pointer;}
 .slick-list {height:100%;}
 .slick-track {height:100%;}
 .wr-slide {height:100%;}
 
-.wr-slide--two {}
-.wr-slide--three {}
+.wr-slide--two {background: url('../img/worth-retail-slide1.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.wr-slide--three {background: url('../img/worth-retail-slide2.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+
+.wr-about {background: #18bbbb; position: relative; display:block;}
+.wr-about h2, .wr-about p {color:#fff; text-align: center;}

@@ -37,17 +37,19 @@ figure img {max-width:100%;}
 
 p {font-family: 'centuryGothic', Arial, sans-serif; font-size:16px;}
 h1, h2, h3, h4 {font-family: 'futuraBook', Arial, sans-serif;}
-h2 {margin:0;}
+h2 {margin:0; font-size:78px;}
 
 .wr-container--outer {width:100%;}
-.wr-container--inner {width:1240px; margin:0 auto; position:relative;}
+.wr-container--inner {width:1240px; margin:0 auto; position:relative; height:100%;}
 .wr-max-height {height:100%;}
+.wr-max-height--full {height:100%;}
+.wr-centre-content {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:100%}
 
 /* --- Navigation --- */
 
 #navbar {height:100%;}
 #navbar .nav-table {width:100%; table-layout: fixed; display: table; height:100%;}
-#navbar .nav-table .nav-cell {display:table-cell; vertical-align: middle; text-align: center;}
+#navbar .nav-table .nav-cell {display:table-cell; vertical-align: middle; text-align: center; padding-top:40px;}
 .navbar h1 {margin:0; padding:0;}
 
 /* --- Col styles --- */
@@ -71,14 +73,17 @@ h2 {margin:0;}
 
 /*Media QUeries*/
 
-@media only screen and (min-width: 0px) and (max-width: 1240px){
-    .navbar .container {width:80%; margin-left:20%;}
-    .navbar-nav > li > a {font-size:20px;}
+@media only screen and (min-width: 0px) and (max-width: 1240px) {
+    .wr-container--inner {width:96%; padding:0 2% 0 2%; }
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 1170px){
+    .navbar .container {width:80% !important; margin-left:20% !important;}
+    .wr-container--inner {width:96%; padding:0 2% 0 2%; }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 991px){
-    .navbar .container {width:85%; margin-left:15%;}
-    .navbar-nav > li > a {font-size:16px;}
 
 }
 
