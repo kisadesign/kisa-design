@@ -23,3 +23,17 @@
 
 .wr-about {background: #18bbbb; position: relative; display:block;}
 .wr-about h2, .wr-about p {color:#fff; text-align: center;}
+
+@media only screen and (min-width: 0px) and (max-width: 1070px){
+    .wr-slide--one .wr-slide--content {width:80%;}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .wr-slide--one .wr-slide--content {width:60%;}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+    .wr-slide-arrow-next {display: none !important;}
+    .wr-slide-arrow-prev {display: none !important;}
+    .wr-slide--one .wr-slide--content {width:100%;}
+}
