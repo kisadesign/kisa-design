@@ -39,7 +39,8 @@ p {font-family: 'centuryGothic', Arial, sans-serif; font-size:16px; margin:20px 
 h1, h2, h3, h4 {font-family: 'futuraBook', Arial, sans-serif; text-transform: uppercase;}
 h2 {margin:0; font-size:78px;}
 
-.wr-container--outer {width:100%;}
+.wr-container--outer {width:100%; position:relative;}
+.wr-container--outer iframe {height:500px; width:100%;}
 .wr-container--inner {width:1240px; margin:0 auto; position:relative; height:100%;}
 .wr-max-height {height:100%;}
 .wr-max-height--full {height:100%;}
@@ -105,15 +106,23 @@ h2 {margin:0; font-size:78px;}
 
 @media only screen and (min-width: 0px) and (max-width: 991px){
 
+    .wr-slide--one .wr-slide--content {position:initial !important; transform: translate(0,0) !important; margin:0 auto;}
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
-
+    .navbar .container {width:100% !important; margin-left:0 !important;}
     .col-container {width:100%; margin:0;}
     .col-container .col-block {width:100%; margin:0 0 20px 0;}
     .wr-footer .wr-footer-bottom .col-block:last-child {text-align: left; margin-bottom:0;}
     .wr-footer .wr-footer-bottom {margin-top:20px;}
     .wr-footer .col-block {border:none;}
+    h2 {font-size:58px;}
+    #navbar .nav-table {display:block; height:100%; background: rgba(0, 0, 0, 0.7);}
+    #navbar .nav-table .nav-cell {display:block; height: auto; padding:20px 0 20px 0; border-bottom:1px solid #9f9f9f;}
+    #navbar .nav-table .nav-cell a {color:#fff;}
+    #navbar {height:auto; z-index:5; position: relative;}
+    .navbar-nav {margin: 0}
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {border-color: #eee; padding:0;}
 
 
 }

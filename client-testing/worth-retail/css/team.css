@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.wr-main-content {padding:40px 0 40px 0;}
+#map {height:500px; padding:0; margin:0;}
+.wr-main-content h2 {text-align: right; color: rgb(70, 147, 155); text-transform: uppercase; font-size:30px;}
+.photo-block {margin-top:20px;}
+.photo-top {position: absolute; top:-1%; left:6%; width:94%; z-index:2; height:96%;}
+.photo-info-outer {display:table; background: rgba(70, 147, 155,0.8); table-layout: fixed; position: absolute; z-index: 3; width:100%; height:100%;}
+.photo-info-inner {text-align: center; vertical-align: middle; display:table-cell;}
+.photo-info-inner h3 {color:#fff; padding:0; margin:0; font-size:14px;}
+.photo-info-inner p {margin:0; padding:0; color:#fff; font-size:12px;}
+.show-photo-info {display:table;}
+.hide-photo-info {display:none;}
+.header-block-map {height:130px; background:rgba(91,78,91,0.6); position: absolute; top:0; bottom:0; z-index:3;}
+.wr-map-container {width:100%; height:500px; position: relative;}
+.wr-map-container h2 {text-align: right; color:#fff; text-transform: uppercase; font-size:30px; padding-top:85px;}

@@ -33,9 +33,14 @@ $(document).ready(function(){
             scrollTop: $(scrollLocation).offset().top
         }, 1000);
 
-    })
+    });
 
+    $('.photo-top').hover(function(){
+      $(this).find('.photo-info-outer').removeClass('hide-photo-info').addClass('show-photo-info');
 
+    }, function(){
+        $(this).find('.photo-info-outer').removeClass('show-photo-info').addClass('hide-photo-info');
+    });
 
 });
 
