@@ -21,8 +21,8 @@
 .wr-slide--two {background: url('../img/worth-retail-slide1.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 .wr-slide--three {background: url('../img/worth-retail-slide2.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
-.wr-about {background: #18bbbb; position: relative; display:block;}
-.wr-about h2, .wr-about p {color:#fff; text-align: center;}
+.wr-smart-block {width:100%; background:rgba(24, 187, 187, 1); height:350px; margin:0 0 10px 0;  transition: transform 0.5s linear; transform-origin: top left; transform-style: preserve-3D; transform: rotate(5deg);}
+.rotate {transform: rotate(0deg);}
 
 @media only screen and (min-width: 0px) and (max-width: 1070px){
     .wr-slide--one .wr-slide--content {width:80%;}

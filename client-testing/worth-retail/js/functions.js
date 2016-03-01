@@ -12,8 +12,6 @@ $(document).ready(function(){
         pauseOnHover: false
     });
 
-
-
     var windowSize = $(window).height(),
         navHeight = $('nav').height(),
         windowSubSize = windowSize - navHeight;
@@ -41,6 +39,27 @@ $(document).ready(function(){
     }, function(){
         $(this).find('.photo-info-outer').removeClass('show-photo-info').addClass('hide-photo-info');
     });
+
+    $(document).scroll(function(){
+        var windowView = $(window).height(),
+            smartBlock = $('.wr-smart-block'),
+            scrollPos = $(document).scrollTop() + 560;
+
+        $(smartBlock).each(function(){
+            if($(this).offset().top < scrollPos){
+                $(this).addClass('rotate');
+            }
+        });
+
+
+
+
+    })
+
+
+
+
+
 
 });
 
