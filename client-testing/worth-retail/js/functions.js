@@ -43,7 +43,7 @@ $(document).ready(function(){
     $(document).scroll(function(){
         var windowView = $(window).height(),
             smartBlock = $('.wr-smart-block'),
-            scrollPos = $(document).scrollTop() + 560;
+            scrollPos = $(document).scrollTop() + windowView - 200;
 
         $(smartBlock).each(function(){
             if($(this).offset().top < scrollPos){
